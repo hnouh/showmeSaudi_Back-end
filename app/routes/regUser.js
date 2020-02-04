@@ -252,10 +252,11 @@ router.get('/api/r-booking/:regUserId',  (req, res) => {
 router.delete('/api/r-booking/delete/:id', (req, res) => {
   Booking.findByIdAndRemove(req.params.id, (err, book) => {
     if (err) {
+      res.json(err)
       console.log("booking not cancel", err)
     }
     else {
-      res.redirect('/');
+      res.json("perfect cancel booking")
       console.log("perfect cancel booking")
     }
   }); 

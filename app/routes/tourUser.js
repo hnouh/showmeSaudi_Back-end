@@ -229,7 +229,6 @@ router.delete('/api/t-booking/delete/:id', (req, res) => {
       console.log("booking not cancel", err)
     }
     else {
-      res.redirect('/');
       console.log("perfect cancel booking")
     }
   }); 
